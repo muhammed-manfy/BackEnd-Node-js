@@ -1,0 +1,36 @@
+{
+  "name": "multysmart_backend",
+  "version": "1.1.0",
+  "description": "express,and,angular,api,multer",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "build":"yarn"
+  },
+  "engines": {
+    "node": ">=16.17.3"
+  },
+  "keywords": [
+    "express",
+    "angular",
+    "api"
+  ],
+  "author": "Muhammed Manfy",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.10.5",
+    "multer": "^1.4.5-lts.1",
+    "netlify-cli": "^16.9.1",
+    "netlify-lambda": "^2.0.16",
+    "nodemon": "^2.0.22",
+    "path": "^0.12.7",
+    "serverless-http": "^3.2.0",
+    "yarn": "^1.22.5"
+  }
+}

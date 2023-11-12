@@ -274,7 +274,7 @@ exports.getUsers = async (req, res) => {
     function validationUserLogin(data) {
 
         if (data.email == '' || data.email == undefined)
-            return ' username is required';
+            return ' email is required';
 
         else if (data.password == '' || data.password == undefined)
             return 'password is required';

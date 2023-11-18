@@ -23,9 +23,7 @@ const commentRoutes = require('./routes/Comment.js'); // Route
 const usersRoutes = require('./routes/User.js'); // Route
 const ordersRoutes = require('./routes/Order.js') // Route
 // cors to protect the server 
-app.use(cors({
-  origin: 'http://localhost:4200',
-}));
+app.use(cors());
 // users routes ... 
 app.use('/admin', adminRoutes);
 app.use('/messages', messagesRoutes);

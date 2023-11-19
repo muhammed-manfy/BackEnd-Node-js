@@ -19,7 +19,7 @@ const productStorge = multer.diskStorage({
         if (file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png')
             callBack(null, file.originalname);
         else {
-            cb(new Error(`Image uploaded is not of type jpg/jpeg 
+            callback(new Error(`Image uploaded is not of type jpg/jpeg 
             or png`), false);
         }
     }
@@ -29,23 +29,18 @@ module.exports.uploadProduct = multer({ storage: productStorge });
 const blogStorge = multer.diskStorage({
     destination: 'uploads/Videos',
     filename: function (req, file, callBack) {
-        if (file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png')
             callBack(null, file.originalname);
-        else {
-            cb(new Error(`Image uploaded is not of type jpg/jpeg 
-            or png`), false);
-        }
     }
 });
 module.exports.uploadBlog = multer({ storage: blogStorge });
 
 const userStorge = multer.diskStorage({
     destination: 'uploads/users',
-    filename: function (req, file, callBack) {
+    filename: function (req, file, callBack,res) {
         if (file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png')
             callBack(null, file.originalname);
         else {
-            cb(new Error(`Image uploaded is not of type jpg/jpeg 
+            cb(res.send(`Image uploaded is not of type jpg/jpeg 
             or png`), false);
         }
     }

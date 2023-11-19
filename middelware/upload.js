@@ -3,12 +3,7 @@ const multer = require('multer');
 const projectStorge = multer.diskStorage({
     destination: 'uploads/projects',
     filename: function (req, file, callBack) {
-        if (file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png')
             callBack(null, file.originalname);
-        else {
-            cb(new Error(`Image uploaded is not of type jpg/jpeg 
-            or png`), false);
-        }
     }
 });
 module.exports.uploadProject = multer({ storage: projectStorge });

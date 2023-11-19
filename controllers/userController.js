@@ -127,7 +127,7 @@ exports.getUsers = async (req, res) => {
         const url = req.protocol + '://' + req.get("host");
 
         await User_Model.findByIdAndUpdate(id, {
-            image: url + '\' + req.file.path,
+            image: url + '/' + req.file.path,
             updated_at: Date.now()
         })
             .then(() => {

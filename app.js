@@ -9,7 +9,7 @@ const port = 8000;
 const dataBaseUrl = "mongodb+srv://Muhammed:Mhmd1234@cluster0.xgwxk49.mongodb.net/?retryWrites=true&w=majority";
 // middlewares
 app.use(express.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/uploads', express.static(path.join('uploads')));
 mongoose.set('strictQuery', false);
 // connect to DataBase

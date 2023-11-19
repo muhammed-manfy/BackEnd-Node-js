@@ -35,7 +35,7 @@ const userStorge = multer.diskStorage({
         if (file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image/png')
             callBack(null, file.originalname);
         else {
-            cb(new Error(`Image uploaded is not of type jpg/jpeg 
+            callback(new Error(`Image uploaded is not of type jpg/jpeg 
             or png`), false);
         }
     }
